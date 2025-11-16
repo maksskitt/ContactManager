@@ -4,7 +4,7 @@ project("Contact book" LANGUAGES CXX VERSION 1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory("Catch2-3.11.0")
+add_subdirectory("Catch2")
 add_executable(tests test_phone.cpp Phone.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 
