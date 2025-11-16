@@ -44,8 +44,15 @@ jobs:
           - os: ubuntu-latest
             c_compiler: cl
 
+    steps:
+    - name: Checkout submodules
+      - uses: actions/checkout@v4
+      with:
+        - submodules: recursive
+        - token: ${{ secrets.PAT_TOKEN }}
+
     - uses: actions/checkout@v4
-    
+
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
       id: strings
