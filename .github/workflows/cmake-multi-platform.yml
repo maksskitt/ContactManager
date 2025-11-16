@@ -45,6 +45,11 @@ jobs:
             c_compiler: cl
 
     steps:
+    - name: checkout all the submodules
+      uses: actions/checkout@v2
+      with:
+        submodules: recursive
+    
     - uses: actions/checkout@v4
 
     - name: Set reusable strings
