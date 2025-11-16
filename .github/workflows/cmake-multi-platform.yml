@@ -45,11 +45,10 @@ jobs:
             c_compiler: cl
 
     steps:
-    - name: Checkout submodules
-      - uses: actions/checkout@v4
-      with:
-        - submodules: recursive
-        - token: ${{ secrets.PAT_TOKEN }}
+    - uses: actions/checkout@v4
+    with:
+      - submodules: recursive
+      - token: ${{ secrets.PAT_TOKEN }}
 
     - uses: actions/checkout@v4
 
